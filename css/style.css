@@ -1,0 +1,31 @@
+dl.tabs {
+	background: pink;
+}
+
+.tabs dd > a {
+	padding: 0;
+}
+
+.test_img_wrap {
+    height: 85px;
+    width: 85px;
+    float: left;
+    overflow: hidden;
+    border: solid 3px white;
+    border-radius: 100px;
+    margin: 5px;
+}
+.test_img_wrap img {
+    display: block;
+}
+
+.portrait img {
+    width: 100%;
+}
+.landscape img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    position: relative;
+	right: 25px;
+}
