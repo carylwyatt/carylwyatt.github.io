@@ -54,6 +54,11 @@ footer {
     font-size: .8em;
 }
 
+ul.five-posts {
+    list-style:none;
+    padding-left:0;
+}
+
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1em;
