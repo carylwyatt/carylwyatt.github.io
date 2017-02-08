@@ -2,7 +2,7 @@
 
 body {
     margin: 60px auto;
-    width: 70%;
+    width: 55%;
     font-family:'Source Sans Pro', 'Arial', sans-serif;
 }
 nav ul, footer ul {
@@ -45,4 +45,10 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.meta {
+    font-size: 1.25em;
+    color: #999;
+    text-transform: lowercase;
 }
