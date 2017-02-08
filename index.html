@@ -1,92 +1,28 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/vendor/modernizr.js"></script>
-
-  </head>
-  <body>
-    
-    <div class="row">
-     
-    <div class="large-8 large-centered columns">
-      <div class="test_faces">
-        <dl class="tabs" data-tab>
-            <dd class="active"><a href="#panel2-1">
-                <div class="test_img_wrap">
-                  <img class="test_img" src="img/blur.jpg" alt="gob">
-                </div>
-              </a></dd>
-            <dd><a href="#panel2-2">
-              <div class="test_img_wrap">
-                <img class="test_img" src="img/lindsay-test.png" alt="lindsay">
-              </div>
-            </a></dd>
-            <dd><a href="#panel2-3">
-              <div class="test_img_wrap">
-                <img class="test_img" src="img/michael-test.jpg" alt="michael">
-              </div>
-            </a></dd>
-            <dd><a href="#panel2-4">
-              <div class="test_img_wrap">
-                <img class="test_img" src="img/tobias-test.jpg" alt="tobias">
-              </div>
-            </a></dd>
-        </dl>
-      </div>
-      <div class="tabs-content">
-        <div class="content active" id="panel2-1">
-          <p>Honestly, everything about Biblio is amazing. You should rush right out and buy it today, you won't regret it!</p>
-        <span class="test_author">-Scott, Wellington</span>
-        </div>
-        <div class="content" id="panel2-2">
-          <p>We love Biblio! It's a beautiful theme, and it does everything we were looking for.</p>
-          <span class="test_author">-Ashley, Valley Center</span>
-        </div>
-        <div class="content" id="panel2-3">
-          <p>Biblio is the best. Period.</p>
-          <span class="test_author">-Mike, Escondido</span>
-        </div>
-        <div class="content" id="panel2-4">
-          <p>I was very excited to see that a theme as robust as Biblio was available for my business. I don't have time to put something like this together, and it exceeds all of my expectations for a Wordpress theme!</p>
-          <span class="test_author">-Myles, Valley Center</span>
-        </div>
-      </div>
-    </div>  
-  </div>
-     
-     
-
-   
-    
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    <script>
-         $(".test_img_wrap").each(function(){
-          // Uncomment the following if you need to make this dynamic
-          var refH = $(this).height();
-          var refW = $(this).width();
-          var refRatio = refW/refH;
-
-          // Hard coded value...
-          // var refRatio = 4/5;
-
-          var imgH = $(this).children("img").height();
-          var imgW = $(this).children("img").width();
-
-          if ( (imgW/imgH) < refRatio ) { 
-              $(this).addClass("portrait");
-          } else {
-              $(this).addClass("landscape");
-          }
-      })
-   </script>
-  </body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>caryl wyatt</title>
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>hi, i'm caryl</h1>
+				<p>i'm a librarian. i'm a front-end developer.</p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:caryl.e.wyatt@gmail.com">email</a></li>
+        		<li><a href="https://github.com/carylwyatt">github.com/hankquinlan</a></li>
+			</ul>
+		</footer>
+	</body>
 </html>
