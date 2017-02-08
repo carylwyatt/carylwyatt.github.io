@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700');
 
+html {
+    font-size:20px;
+}
+
 body {
     margin: 60px auto;
     width: 55%;
     font-family:'Open Sans', 'Arial', sans-serif;
+    font-size:1em;
 }
 nav ul, footer ul {
     padding: 0px;
@@ -23,11 +28,10 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight:700;
 }
 p {
-    font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
@@ -38,7 +42,7 @@ footer {
 
 ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 ul.posts li {
@@ -46,7 +50,7 @@ ul.posts li {
 }
 
 .meta {
-    font-size: 1.25em;
+    font-size: .8em;
     color: #999;
     text-transform: lowercase;
     font-weight:300;
