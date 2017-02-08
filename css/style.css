@@ -17,6 +17,8 @@ nav ul li, footer ul li {
 a {
     text-decoration: none;
     color: #999;
+    font-family:'Muli', 'Arial', sans-serif;
+    font-weight:400;
 }
 a:hover {
     text-decoration: underline;
@@ -24,6 +26,7 @@ a:hover {
 h1 {
     font-size: 2em;
     font-weight:700;
+    font-family:'Muli', 'Arial', sans-serif;
 }
 p {
     font-size: 1.5em;
