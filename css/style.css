@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Muli:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700');
 
 body {
     margin: 60px auto;
     width: 55%;
-    font-family:'Source Sans Pro', 'Arial', sans-serif;
+    font-family:'Open Sans', 'Arial', sans-serif;
 }
 nav ul, footer ul {
     padding: 0px;
@@ -17,7 +17,6 @@ nav ul li, footer ul li {
 a {
     text-decoration: none;
     color: #999;
-    font-family:'Muli', 'Arial', sans-serif;
     font-weight:400;
 }
 a:hover {
@@ -26,7 +25,6 @@ a:hover {
 h1 {
     font-size: 2em;
     font-weight:700;
-    font-family:'Muli', 'Arial', sans-serif;
 }
 p {
     font-size: 1.5em;
@@ -51,6 +49,5 @@ ul.posts li {
     font-size: 1.25em;
     color: #999;
     text-transform: lowercase;
-    font-family:'Muli', 'Arial', sans-serif;
     font-weight:300;
 }
