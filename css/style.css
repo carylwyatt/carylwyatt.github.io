@@ -60,6 +60,14 @@ footer {
 ul.five-posts {
     list-style:none;
     padding-left:0;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.five-posts li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .posts__date {
