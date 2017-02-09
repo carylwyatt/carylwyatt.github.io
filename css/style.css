@@ -25,7 +25,7 @@ nav ul, footer ul {
     list-style: none;
     font-weight: bold;
 }
-nav ul li, footer ul li {
+nav ul li, footer ul li, .post-date {
     display: inline;
     margin-right: 20px;
 }
