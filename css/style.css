@@ -6,7 +6,8 @@ html {
 
 body {
     margin: 60px auto;
-    width: 55%;
+    max-width: 700px;
+    padding: 0 1.5em;
     font-family:'Open Sans', 'Arial', sans-serif;
     font-size:1em;
 }
