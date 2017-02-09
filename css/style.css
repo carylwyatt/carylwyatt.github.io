@@ -35,8 +35,11 @@ nav ul li a {
 
 a {
     text-decoration: none;
-    color: #999;
-    font-weight:400;
+    color: darkorange;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .075em;
+    font-size: .8em;
 }
 a:hover {
     text-decoration: underline;
