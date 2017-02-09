@@ -77,6 +77,10 @@ ul.five-posts li {
     font-size: .8em;
 }
 
+.blurb h1 {
+    font-size:2.5em;
+}
+
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1em;
