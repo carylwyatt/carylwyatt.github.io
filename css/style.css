@@ -32,6 +32,7 @@ nav ul li, footer ul li {
 
 nav ul li a, footer ul li a {
     text-transform:lowercase;
+    font-size:1em;
 }
 
 a {
