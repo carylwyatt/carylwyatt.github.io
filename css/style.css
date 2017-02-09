@@ -75,6 +75,7 @@ ul.five-posts li {
     font-weight: 300;
     text-transform: lowercase;
     font-size: .8em;
+    padding-right: 25px;
 }
 
 .blurb h1 {
