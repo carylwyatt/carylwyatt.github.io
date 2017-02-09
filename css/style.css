@@ -71,6 +71,7 @@ ul.five-posts li {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    margin-bottom: 5px;
 }
 
 .posts__date {
