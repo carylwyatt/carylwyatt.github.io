@@ -62,6 +62,14 @@ ul.five-posts {
     padding-left:0;
 }
 
+.posts__date {
+    padding-left: 20px;
+    color: #999;
+    font-weight: 300;
+    text-transform: lowercase;
+    font-size: .8em;
+}
+
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1em;
