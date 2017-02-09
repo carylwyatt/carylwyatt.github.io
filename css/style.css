@@ -47,6 +47,7 @@ a:hover {
 h1 {
     font-size: 1.5em;
     font-weight:700;
+    margin-bottom:0;
 }
 p {
     line-height: 1.4em;
@@ -96,4 +97,5 @@ ul.posts li {
     color: #999;
     text-transform: lowercase;
     font-weight:300;
+    margin-top:0;
 }
