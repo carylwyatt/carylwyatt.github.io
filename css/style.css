@@ -56,6 +56,10 @@ h2 {
     font-weight:700;
     margin-bottom:0;
 }
+h3 {
+    font-size:1.25em;
+    font-weight:700;
+}
 p {
     line-height: 1.4em;
     color: #333;
