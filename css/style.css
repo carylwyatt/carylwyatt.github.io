@@ -103,3 +103,7 @@ ul.posts li {
     font-weight:300;
     margin-top:0;
 }
+
+.post img {
+    width:100%;
+}
