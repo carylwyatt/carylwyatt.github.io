@@ -6,12 +6,12 @@ date: 2017-02-20
 
 The library website. Where do I even start?
 
-### ugly as hell
+### ugly as boo
 I'm really not trying to insult whoever designed this. It was created in 2005, so it was probably closer to "state of the art" back then. By the time I arrived on the scene in 2014, this thing was screaming for a remake:
 
 ![Library website 2005-2015](/img/website screenshots/old-ivy-tech-home.jpg)
 
-I mean... yuck. Just- wut? 
+Just. No. 
 
 It's hard for me to remember the online world in 2005 and how this fit into it, but I'll try. I didn't join Facebook until 2006, so that helps me remember how things were back then. This is before widescreen monitors were a thing and before the iPhone was household name. 
 
