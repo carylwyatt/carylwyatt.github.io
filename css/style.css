@@ -110,5 +110,5 @@ ul.posts li {
 }
 
 .post img {
-    width:100%;
+    max-width:100%;
 }
