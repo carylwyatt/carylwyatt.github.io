@@ -31,7 +31,7 @@ Access permissions: check **make available to public** box
 
 ## Code
 ### HTML
-~~~html
+{% highlight html linenos %}
 
     <h3>Today's Hours</h3>
     <p id="todays-date"></p>
@@ -41,7 +41,7 @@ Access permissions: check **make available to public** box
     </div>
     <p><a class="more-link" href="http://library.ivytech.edu/indianapolis/hours">See all hours and locations  <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
     
-~~~
+{% endhighlight %}
 ### CSS
 ```css
     #todays-date {
