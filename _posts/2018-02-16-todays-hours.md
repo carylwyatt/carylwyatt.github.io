@@ -32,7 +32,7 @@ Access permissions: check **make available to public** box
 ## Code
 ### HTML
 
-```html
+{% highlight html linenos %}
     <h3>Today's Hours</h3>
     <p id="todays-date"></p>
     <div class="table-responsive">
@@ -40,9 +40,10 @@ Access permissions: check **make available to public** box
       </table>
     </div>
     <p><a class="more-link" href="http://library.ivytech.edu/indianapolis/hours">See all hours and locations  <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
-```
+{% endhighlight %}
 
 ### CSS
+
 {% highlight css linenos %}
     #todays-date {
         font-style:italic;
@@ -67,6 +68,7 @@ Access permissions: check **make available to public** box
 		border:none;
     }
 {% endhighlight %}
+
 ### JavaScript/jQuery
 #### Notes for implementation
 - When you link to this script, make sure to link to the CDN files for lodash and moment, too.
@@ -74,7 +76,7 @@ Access permissions: check **make available to public** box
 	- You'll find your calendar address in the settings of the google calendar. It looks like an email address and follows the phrase **Calendar ID**.
 	- The API key is supplied by the Google Developers Console API Manager. You will need to create a new credential for this project, and this is free to do. See [Creating a Google API Key](https://docs.simplecalendar.io/google-api-key/) for step-by-step instructions.
 
-```javascript
+{% highlight javascript linenos %}
   //====set up date/time variables (moments.js)
     //get today's date
     const date = moment();
@@ -158,4 +160,4 @@ Access permissions: check **make available to public** box
     
     //google calendar API request call
     const response = $.getJSON(googleCal, displaySchedule);
-```
+{% endhighlight %}
