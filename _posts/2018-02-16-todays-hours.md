@@ -4,6 +4,10 @@ title: "google calendar hours plugin"
 date: 2018-02-16
 ---
 
+I wrote this plugin in the summer of 2017 and have been tweaking it little by little since then. The full documentation can be found in [my repo](https://github.com/carylwyatt/google-cal-hours-widget). This is a write-up for [Brad Coffield's](https://www.bradcoffield.com/) [APIs for Librarians](https://www.bradcoffield.com/APIs-for-librarians/) project. 
+
+### Description
+
 This plugin takes information from a single Google calendar and displays it in a table. [Ivy Tech Community College Indianapolis Library's website](http://library.ivytech.edu/indianapolis) (via Springshare's LibGuides CMS) uses this tool to display "Today's Hours" for three library locations on the homepage. 
 
 ### Screenshot
@@ -16,7 +20,7 @@ You will need access to the settings of the Google Calendar you want to get data
 ## Calendar setup
 This script reads specific data points from the calendar's JSON data. If you don't want to fiddle with the JS, you'll have to set up your calendar and events exactly like mine. Feel free to do things your own way, but you'll have to edit the code. 
 
-### Calendar Settings
+### Calendar settings
 Access permissions: check **make available to public** box
 
 ### Events
@@ -33,7 +37,7 @@ Access permissions: check **make available to public** box
 ### HTML
 {:.code-notes}
 
-- Lines 1-2 load the required JS libraries; this can go in your header, but if you're using LibGuides, just drop this whole HTML section into the Source section of a rich text box
+- Lines 1-2 load the required JS libraries; this can go in the `head`, but if you're using LibGuides, just drop this whole HTML section into the Source section of a rich text box
 - Lines 4-8 are necessary, the rest are window dressing
 
 {% highlight html linenos %}
@@ -53,11 +57,6 @@ Access permissions: check **make available to public** box
 {% highlight css linenos %}
     #todays-date {
         font-style:italic;
-    }
-    #hours-list ul  {
-        list-style: none;
-        padding-left: 0;
-        padding: 5px 0;
     }
     
     #hours-grid td {
@@ -82,6 +81,7 @@ Access permissions: check **make available to public** box
 
 - Line 16: You'll find your calendar address in the settings of the google calendar. It looks like an email address and follows the phrase **Calendar ID**.
 - Line 17: The API key is supplied by the Google Developers Console API Manager. You will need to create a new credential for this project, and this is free to do. See [Creating a Google API Key](https://docs.simplecalendar.io/google-api-key/) for step-by-step instructions.
+- Line 21: The time frame is set to read your google calendar from 1 am - 11:59 pm. I had trouble with all-day events showing up on the next day when I used the 0:00:00-23:59:59 time code, so I tweaked it. Our library is never open past 7pm, so I've never tested a time frame that extends to the next day. YMMV.
 
 {% highlight javascript linenos %}
   //====set up date/time variables (moments.js)
@@ -104,7 +104,7 @@ Access permissions: check **make available to public** box
     
     //inject today's date in YYYY-MM-DD format to the API URL
     //this url returns only the events scheduled for today
-    const googleCal = `https://www.googleapis.com/calendar/v3/calendars/${calAddress}/events?singleEvents=true&timeMin=${utc}T00:00:00-04:00&timeMax=${utc}T23:59:59-04:00&key=${keyAPI}`;
+    const googleCal = `https://www.googleapis.com/calendar/v3/calendars/${calAddress}/events?singleEvents=true&timeMin=${utc}T01:00:00-04:00&timeMax=${utc}T23:59:59-04:00&key=${keyAPI}`;
     
     //===========MAIN PLUGIN FUNCTION=============
     //takes response data from API (see const response below) and runs it
