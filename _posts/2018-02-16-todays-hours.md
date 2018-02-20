@@ -31,8 +31,14 @@ Access permissions: check **make available to public** box
 
 ## Code
 ### HTML
+{:.code-notes}
+
+- Lines 1-2 load the required JS libraries; this can go in your header, but if you're using LibGuides, just drop this whole HTML section into the Source section of a rich text box
+- Lines 4-8 are necessary, the rest are window dressing
 
 {% highlight html linenos %}
+<!--lodash--><script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+<!--moment--><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <h3>Today's Hours</h3>
     <p id="todays-date"></p>
     <div class="table-responsive">
@@ -71,10 +77,11 @@ Access permissions: check **make available to public** box
 
 ### JavaScript/jQuery
 #### Notes for implementation
-- When you link to this script, make sure to link to the CDN files for lodash and moment, too.
-- Setting up important variables:
-	- You'll find your calendar address in the settings of the google calendar. It looks like an email address and follows the phrase **Calendar ID**.
-	- The API key is supplied by the Google Developers Console API Manager. You will need to create a new credential for this project, and this is free to do. See [Creating a Google API Key](https://docs.simplecalendar.io/google-api-key/) for step-by-step instructions.
+
+{:.code-notes}
+
+- Line 16: You'll find your calendar address in the settings of the google calendar. It looks like an email address and follows the phrase **Calendar ID**.
+- Line 17: The API key is supplied by the Google Developers Console API Manager. You will need to create a new credential for this project, and this is free to do. See [Creating a Google API Key](https://docs.simplecalendar.io/google-api-key/) for step-by-step instructions.
 
 {% highlight javascript linenos %}
   //====set up date/time variables (moments.js)
