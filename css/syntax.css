@@ -1,4 +1,4 @@
-pre, code {
+code {
   font-size:.8em;
 }
 .highlight {
@@ -16,7 +16,6 @@ white-space: pre;
   overflow-x: auto;
   word-break: inherit;
   word-wrap: inherit;
-  font-size:.8em;
 
 }
 
