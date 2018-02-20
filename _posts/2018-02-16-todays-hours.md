@@ -43,7 +43,7 @@ Access permissions: check **make available to public** box
 ```
 
 ### CSS
-```css
+{% highlight css linenos %}
     #todays-date {
         font-style:italic;
     }
@@ -66,7 +66,7 @@ Access permissions: check **make available to public** box
     .table-responsive {
 		border:none;
     }
-```
+{% endhighlight %}
 ### JavaScript/jQuery
 #### Notes for implementation
 - When you link to this script, make sure to link to the CDN files for lodash and moment, too.
