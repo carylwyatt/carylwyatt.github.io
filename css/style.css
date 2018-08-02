@@ -101,6 +101,10 @@ ul.posts li {
     list-style: none;
 }
 
+code {
+  font-size:1em;
+}
+
 .meta {
     font-size: .8em;
     color: #999;
