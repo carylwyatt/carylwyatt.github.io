@@ -101,8 +101,8 @@ ul.posts li {
     list-style: none;
 }
 
-code {
-  font-size:1em;
+li code, p code {
+  font-size:.9em;
 }
 
 .meta {
