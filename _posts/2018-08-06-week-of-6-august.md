@@ -10,3 +10,23 @@ I talked with Scott over the weekend about npm packages and dependencies. I'm go
 - same errors: serialport @6.0.5 no prebuilt binaries for node 8.11.3, arch=arm, platform=linux
 - **big duh moment**: [support for raspi linux with arch=arm](https://www.npmjs.com/package/serialport#raspberry-pi-linux) doesn't exist
 - how does johnny-five have serialport as a dependency if it doesn't work on linux ARM platforms?!
+- did some more digging through issues, someone suggested having `gcc` but that didn't work
+- gcc itself suggested installing `google-closure-compiler-js` since they no longer update `gcc` (four years!)
+- uninstalled/reinstalled johnny-five 0.12.0, but still getting the prebuilt binaries error
+- read more `node-serialport` and `raspi-io` issues, all their fixes were things I already have installed, so I'm at impasse again.
+- thought maybe I got really lucky when I came across [getting a raspberry pi ready for nodebots](https://github.com/nebrius/raspi-io/wiki/Getting-a-Raspberry-Pi-ready-for-NodeBots), but I've done all this stuff.
+- noticed I didn't have `node-gyp` installed (*how?*), so installed that; went through j5 uninstall-reinstall, still nothing
+- saw a comment in an issue about cloning the node-serialport github repo and installing it locally; took forever but it installed successfully without the same errors I've been getting
+- had a thought: could my old npm version be the issue? upgraded npm version in just one directory to test; no avail
+
+I'm going to walk away from the serialport stuff for a while. I was hoping that if I could get a clean npm install that it would clear up whatever access issue I'm experiencing inside the Docker container, but I'm still not sure that serialport and modprobe are connected in any way. I get a weird error during npm install of serialport, but still somehow end up with serialport installed, so I'm not sure that's the error that's holding this up.
+
+Going back to building docker images:
+- still working with the new [raspbian-stretch](https://hub.docker.com/r/schachr/raspbian-stretch/) image
+- it must be pretty bare bones... no node/npm installed, so I'm working on that
+- sudo not installed??
+- installed sudo but now it's getting stuck on `pigpio` *surprise*
+
+I don't have time to run this whole thing again today, so tomorrow I need to:
+- preinstall pigpio
+- take a look at [Alpine Linux](https://github.com/node-serialport/node-serialport/tree/master/packages/serialport#alpine-linux) for serialport
