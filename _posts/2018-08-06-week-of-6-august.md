@@ -3,6 +3,8 @@ layout: post
 title: "week of 6 august"
 date: 2018-08-06
 ---
+## 6 aug
+
 I talked with Scott over the weekend about npm packages and dependencies. I'm going to try taking the `^` character out of the `package.json` file for packages I want to use old stuff with. I learned that the `^` means npm will install *newer* versions of the package if there aren't breaking changes (major update). That's not what I want. 
 - removed carat from `package.json`
 - ran `npm install` and everything is fine?
@@ -30,3 +32,20 @@ Going back to building docker images:
 I don't have time to run this whole thing again today, so tomorrow I need to:
 - preinstall pigpio
 - take a look at [Alpine Linux](https://github.com/node-serialport/node-serialport/tree/master/packages/serialport#alpine-linux) for serialport
+
+## 7 aug
+
+Starting the day off strong with a new directory for exploring a docker container with Alpine Linux/node.
+- copied Dockerfile, .dockerignore, gate-counter.js, and package.json
+- updated files to match new image
+- attempted to build image
+- got a weird error
+
+After googling, I found that resin has an alpine-node base image specifically for rpi3. 
+- made new directory
+- copied Dockerfile, .dockerignore, gate-counter.js, and package.json
+- updated files to match new image
+
+Alpine is ***very*** diferrent than Raspbian. Package manager is apk instead of apt-get. I'm struggling to get normal packages installed. When I try to get npm to install my packages, it says it can't find pigpio. That's because it's not installed. But I can't figure out how to install pigpio without apt-get! I tried downloading wget, unzip, and make so I could download the package, unzip it, and install it using make, but now I'm getting an error from make, and I DON'T UNDERSTAND ANY OF THIS.
+
+Gotta take a break until tomorrow.
