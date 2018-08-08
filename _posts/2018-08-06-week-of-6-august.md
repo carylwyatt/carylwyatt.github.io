@@ -71,3 +71,19 @@ Since I can't debug alpine issues from my raspi, I built a blank `resin/raspberr
 - ran the conatiener using `--cap-add=ALL --privileged` because it was struggling to build the resin files
 - gave me some error about not having a `CMD` command (I don't)
 - so I exited the container, then used `docker exec <container ID> /bin/bash` to start messing around in alpine 
+- made sure all the things were installed (build-base, sudo, python)
+- added the things [serialport suggests](https://github.com/node-serialport/node-serialport/tree/master/packages/serialport#alpine-linux) (linux-headers, udev)
+- git cloned gate-counter from repo
+- attempted to `npm install` the stuff from README
+- hung up on raspi-io because `pigpio` isn't installed; can't auto install because `apt-get` isn't a thing in alpine 
+- pigpio install is failing at same point as during Docker build: final step `sudo make install` at `ldconfig` step
+	- after much googling, I think this might be because [ldconfig is a glibc thing](http://man7.org/linux/man-pages/man8/ldconfig.8.html) and [alpine is musl standard library](https://github.com/node-serialport/node-serialport/tree/master/packages/serialport#alpine-linux)  
+	- confirmed: [thanks to this listserv](http://lists.busybox.net/pipermail/buildroot/2016-June/164150.html)
+	- I believe this means alpine linux is out
+	- going to step away from the alpine stuff for now
+
+Going back to the original `new-test` directory and seeing if any of my new-found knowledge will help debug this nonsense
+	- added pigpio stuff to Dockerfile's `RUN apt-get install` line and double checked my node_modules
+	- still getting all that crazy error stuff when installing `serialport` but I don't think it matters
+	- spun up a container and got an i2c error 
+	- so I guess I'm back to "do I even *need* i2c stuff since I'm not using i2c pins?"
