@@ -85,5 +85,23 @@ Since I can't debug alpine issues from my raspi, I built a blank `resin/raspberr
 Going back to the original `new-test` directory and seeing if any of my new-found knowledge will help debug this nonsense
 	- added pigpio stuff to Dockerfile's `RUN apt-get install` line and double checked my node_modules
 	- still getting all that crazy error stuff when installing `serialport` but I don't think it matters
-	- spun up a container and got an i2c error 
+	- spun up a container and got a modprobe i2c error 
 	- so I guess I'm back to "do I even *need* i2c stuff since I'm not using i2c pins?"
+
+Got into new-test container using `exec` so I could dig around in the files
+- This is the full error message from the npm install stage:
+	```
+	Error: Command failed: modprobe i2c-dev
+	modprobe: ERROR: ../libkmod/libkmod.c:557 kmod_search_moddep() could not open moddep file '/lib/modules/4.14.34-v7+/modules.dep.bin'
+	``` 
+- Went looking for the `/lib/modules` folder, but it doesn't seem to exist (!!)
+- Some stack overflowing suggested I install `linux-headers` (d'oh! that was suggeted in the `serialport` docs, too)
+- Ran `sudo apt-get install linux-headers-\`uname -r\`` and got a new error:
+	```
+	E: Unable to locate package linux-headers-4.14.34-v7
+	E: Couldn't find any package by regex 'linux-headers-4.14.34-v7'
+	```
+- After more googling about resin images w/o `lib/modules/` folder, found an issue about mounting the volume at `docker run` (which again, is something that has been suggested before)
+- This ran the gate-counter.js app w/o error, but also closed the board and exited the app:
+	- `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules carylwyatt/new-test`
+- Now... how to keep it running?
