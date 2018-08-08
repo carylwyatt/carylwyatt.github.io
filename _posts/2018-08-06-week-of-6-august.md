@@ -51,3 +51,7 @@ After googling, I found that resin has an alpine-node base image specifically fo
 Alpine is ***very*** diferrent than Raspbian. Package manager is apk instead of apt-get. I'm struggling to get normal packages installed. When I try to get npm to install my packages, it says it can't find [pigpio](http://abyz.me.uk/rpi/pigpio/http://abyz.me.uk/rpi/pigpio/). That's because it's not installed. But I can't figure out how to install pigpio without apt-get! I tried downloading wget, unzip, and make so I could download the package, unzip it, and install it using make, but now I'm getting an error from make, and I DON'T UNDERSTAND ANY OF THIS.
 
 Gotta take a break until tomorrow.
+
+## 8 aug
+
+I was pretty fed up yesterday. Let's hope some tunes and extra coffee can help me figure this out today.
