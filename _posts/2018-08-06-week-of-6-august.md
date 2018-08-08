@@ -110,4 +110,6 @@ Got into new-test container using `exec` so I could dig around in the files
 - **IT'S WORKING!!**
 - :tada::sob::heart::clap::clap:
 
-Okay, it's running, but the ajax request isn't being sent correctly. I'll get this sorted out after a massive celebration.
+*Just a personal note to self: yesterday, you were so frustrated by this you almost cried ~10 separate times. Even last night when you were telling Scott all about it, you almost cried again. You're not a crier. You were legit angry at this not working after a full MONTH and you still couldn't figure it out. After sleeping on it, you came back with a clear head and kept going. YOU DID IT.*
+
+Okay, it's running, but the ajax request isn't being sent correctly. I'll get this sorted out after a massive celebration. I'm guessing this is a problem with the exposed port. That whole part of the docker container has not been on my radar as of yet. 
