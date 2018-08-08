@@ -105,6 +105,12 @@ li code, p code {
   font-size:.9em;
 }
 
+.Previous-next {
+  display:flex;
+  justify-content:space-between;
+  margin:20px 0;
+}
+
 .meta {
     font-size: .8em;
     color: #999;
