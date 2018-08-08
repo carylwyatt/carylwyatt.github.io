@@ -96,12 +96,16 @@ Got into new-test container using `exec` so I could dig around in the files
 	``` 
 - Went looking for the `/lib/modules` folder, but it doesn't seem to exist (!!)
 - Some stack overflowing suggested I install `linux-headers` (d'oh! that was suggeted in the `serialport` docs, too)
-- Ran `sudo apt-get install linux-headers-\`uname -r\`` and got a new error:
+- Ran `sudo apt-get install linux-headers-`\uname -r`\` and got a new error:
 	```
 	E: Unable to locate package linux-headers-4.14.34-v7
 	E: Couldn't find any package by regex 'linux-headers-4.14.34-v7'
 	```
-- After more googling about resin images w/o `lib/modules/` folder, found an issue about mounting the volume at `docker run` (which again, is something that has been suggested before)
+- After more googling about resin images w/o `/lib/modules` folder, found an issue about mounting the volume at `docker run` (which again, is something that has been suggested before)
 - This ran the gate-counter.js app w/o error, but also closed the board and exited the app:
 	- `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules carylwyatt/new-test`
 - Now... how to keep it running?
+- ran in exec mode
+- ran `sudo node gate-counter.js` 
+- **IT'S WORKING!!**
+- :tada::sob::heart::clap::clap:
