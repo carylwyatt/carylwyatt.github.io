@@ -58,9 +58,9 @@ I was pretty fed up yesterday. Let's hope some tunes and extra coffee can help m
 
 Current situation:
 - Depending on the docker build, I'm having issues with either
-	- `pigpio` which needs to be installed on the system *as well as* in the node modules
-	- `raspi-io` my/Johnny Five's chosen library for gpio pins on the raspi, which has to be *installed* as non-root user but then must be *run* as root
-	- `serialport` ...for reasons I'm still not sure about
+	- `pigpio` which needs to be installed on the system *as well as* in the node modules :fearful:
+	- `raspi-io` my/Johnny Five's chosen library for gpio pins on the raspi, which has to be *installed* as non-root user but then must be *run* as root :persevere:
+	- `serialport` because of a pre-built binaries problem :poop:
 - Docker images/OSes
 	- Raspbian was an easy choice, since it's what I built my app with
 		- For whatever reason, all the raspbian builds I've done have failed because of the above libraries
