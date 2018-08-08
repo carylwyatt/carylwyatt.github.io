@@ -55,3 +55,15 @@ Gotta take a break until tomorrow.
 ## 8 aug
 
 I was pretty fed up yesterday. Let's hope some tunes and extra coffee can help me figure this out today.
+
+Current situation:
+- Depending on the docker build, I'm having issues with either
+	- `pigpio` which needs to be installed on the system *as well as* in the node modules
+	- `raspi-io` my/Johnny Five's chosen library for gpio pins on the raspi, which has to be *installed* as non-root user but then must be *run* as root
+	- `serialport` ...for reasons I'm still not sure about
+- Docker images/OSes
+	- Raspbian was an easy choice, since it's what I built my app with
+		- For whatever reason, all the raspbian builds I've done have failed because of the above libraries
+		- Several `serialport` issues suggested using an alpine node build, so I switched, but that's causing a whole new set of problems
+
+
