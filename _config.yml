@@ -1,3 +1,5 @@
 name: "caryl wyatt"
 permalink: /blog/:year/:month/:day/:title
 highlighter: rouge
+plugins:
+  - jemoji
