@@ -109,3 +109,5 @@ Got into new-test container using `exec` so I could dig around in the files
 - ran `sudo node gate-counter.js` 
 - **IT'S WORKING!!**
 - :tada::sob::heart::clap::clap:
+
+Okay, it's running, but the ajax request isn't being sent correctly. I'll get this sorted out after a massive celebration.
