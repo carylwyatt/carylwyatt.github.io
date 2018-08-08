@@ -66,4 +66,8 @@ Current situation:
 		- For whatever reason, all the raspbian builds I've done have failed because of the above libraries
 		- Several `serialport` issues suggested using an alpine node build, so I switched, but that's causing a whole new set of problems
 
-
+Since I can't debug alpine issues from my raspi, I built a blank `resin/raspberrypi3-alpine-node` container (no app) so I can work on installing pigpio from inside
+- used the Dockerfile from the docker hub page
+- ran the conatiener using `--cap-add=ALL --privileged` because it was struggling to build the resin files
+- gave me some error about not having a `CMD` command (I don't)
+- so I exited the container, then used `docker exec <container ID> /bin/bash` to start messing around in alpine 
