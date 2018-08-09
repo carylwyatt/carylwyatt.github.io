@@ -121,3 +121,26 @@ HTTP request problem solved: when I cloned my github repo I forgot to change the
 I did end up changing my Dockerfile to expose port 443: `EXPOSE 443` and added the `-p 443:443` to the `docker run` command. I have no idea if this made any kind of difference, so I might end up testing and modifying that later.
 
 Now I just need to figure out how to run the docker container indefinitely. I assume it has something to do with the detacehed flag `-d`. I'm also not sure it matters whether or not the app runs on the `docker run` command. It currently initializes the REPL and immediately closes the board... I wonder why? 
+
+### imaging
+
+Now that I've (mostly) figured out the Docker piece of this puzzle, it's time to move on to imaging an SD card with my version of raspbian that includes Docker and my app container, is secure via ssh, and auto-upgrades raspbian.
+
+In order to get a fresh raspi image to copy, I'll have to set up a clean SD card. I'm thinking these will be my steps:
+- flash blank SD card with latest (or currently running??) raspbian
+- run through [5 best basic security tips](http://kamilslab.com/2017/01/29/5-best-basic-security-tips-and-tricks-every-raspberry-pi-user-needs-to-take/) to create secure pi (create new user, remove pi user, set new password, add Fail2Ban, install unattended-upgrades, set up ssh key pairing)
+- install docker
+- build docker image/container
+
+I assume that will take me most of tomorrow (after the academic affairs kickoff). After how much trouble I had flashing the SD card previously, I'm hoping this time it won't be so hard. I'm probably wrong, but hopefully I'm older and wiser now, right?
+
+Then I can attempt to save the disk as an image and flash another one. Yay!
+
+Links for tomorrow:
+- [How to set up SSH keys on raspberry pi](http://kamilslab.com/2016/12/17/how-to-set-up-ssh-keys-on-the-raspberry-pi/)
+- [How to prepare raspberry pi SD card on chromebook](http://analphabetoftech.blogspot.com/2016/05/how-to-prepare-raspberry-pi-sd-card-on.html)
+- [Self-updating IoT apps on the raspberry pi using docker](https://medium.com/imont/self-updating-iot-apps-on-the-raspberry-pi-using-docker-a0b223fd4eeb)
+- [hypriot's flash repo](https://github.com/hypriot/flash)
+- [create a custom raspbian os image for production](https://medium.com/platformer-blog/creating-a-custom-raspbian-os-image-for-production-3fcb43ff3630)
+- [getting started with docker on your raspberry pi](https://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
+- [PiBakery](https://www.raspberrypi.org/blog/pibakery/)
