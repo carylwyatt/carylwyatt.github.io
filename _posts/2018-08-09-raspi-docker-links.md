@@ -1,7 +1,7 @@
 ---                                                                                                                                                     
 layout: post
 title: "raspi/docker links"
-date: 2018-08-06
+date: 2018-08-09
 ---
 
 At the beginning of this project, I had waayyyy too many tabs open. I hated reopening the same windows for weeks, so I put them here instead.
