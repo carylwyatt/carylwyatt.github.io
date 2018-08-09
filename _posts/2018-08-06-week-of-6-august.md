@@ -113,3 +113,11 @@ Got into new-test container using `exec` so I could dig around in the files
 *Just a personal note to self: yesterday, you were so frustrated by this you almost cried ~10 separate times. Even last night when you were telling Scott all about it, you almost cried again. You're not a crier. You were legit angry at this not working after a full MONTH and you still couldn't figure it out. After sleeping on it, you came back with a clear head and kept going. YOU DID IT.*
 
 Okay, it's running, but the ajax request isn't being sent correctly. I'll get this sorted out after a massive celebration. I'm guessing this is a problem with the exposed port. That whole part of the docker container has not been on my radar as of yet. 
+
+## 9 aug
+
+HTTP request problem solved: when I cloned my github repo I forgot to change the fake google URL to the real google URL. :joy:
+
+I did end up changing my Dockerfile to expose port 443: `EXPOSE 443` and added the `-p 443:443` to the `docker run` command. I have no idea if this made any kind of difference, so I might end up testing and modifying that later.
+
+Now I just need to figure out how to run the docker container indefinitely. I assume it has something to do with the detacehed flag `-d`. I'm also not sure it matters whether or not the app runs on the `docker run` command. It currently initializes the REPL and immediately closes the board... I wonder why? 
