@@ -144,3 +144,9 @@ Links for tomorrow:
 - [create a custom raspbian os image for production](https://medium.com/platformer-blog/creating-a-custom-raspbian-os-image-for-production-3fcb43ff3630)
 - [getting started with docker on your raspberry pi](https://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
 - [PiBakery](https://www.raspberrypi.org/blog/pibakery/)
+
+## 10 aug
+
+I just realized that the gate-counter time is ahead of eastern by 4 hours. I have no idea why, but I will figure it out later. Today is all about imaging.
+
+
