@@ -149,4 +149,12 @@ Links for tomorrow:
 
 I just realized that the gate-counter time is ahead of eastern by 4 hours. I have no idea why, but I will figure it out later. Today is all about imaging.
 
-
+Flashing blank SD card with raspbian:
+- two ways I could go: chromebook or raspi itself
+  - first option chromebook
+  - sadly, it can't hold much and is pretty full as it is, so I'm downloading raspbian (1.6GB) onto a flash drive and hoping for the best
+  - downloaded zip file to flash drive, then extracted the image (25MB) and saved to downloads folder
+  - now following directions from [how to prepare raspberry pi SD card on chromebook](http://analphabetoftech.blogspot.com/2016/05/how-to-prepare-raspberry-pi-sd-card-on.html)
+  - the flashing seems to have worked; writing from the chromebook to the card took ~5 minutes
+  - the flash worked... in a way. The pi knew it was raspbian, etc. but there was some kind of kernel panic error message that I googled. I ended up running the flashing process again, but it did the same thing. 
+- now I'm going to try to find a linux tool for writing to an SD card instead of `dd` in the terminal
