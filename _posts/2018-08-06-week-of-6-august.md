@@ -158,3 +158,17 @@ Flashing blank SD card with raspbian:
   - the flashing seems to have worked; writing from the chromebook to the card took ~5 minutes
   - the flash worked... in a way. The pi knew it was raspbian, etc. but there was some kind of kernel panic error message that I googled. I ended up running the flashing process again, but it did the same thing. 
 - now I'm going to try to find a linux tool for writing to an SD card instead of `dd` in the terminal
+- tried to install [CLI version of etcher](https://etcher.io/cli/); it installed just fine, but then gave me an error about not being able to find command `etcher.js`
+- downloaded the linux-x64 [GUI etcher app](https://etcher.io/) since it's what I used on the macbook to flash the original SD card
+- installed just fine, but then gave me a crazy error `No polkit authenticatin agent found`
+- did all the googling/github issue finding/stack overflowing
+  - tried installing other policy kits
+    - most of the ones I tried to install "didn't exist" in apt-get
+    - could not find the ones recommended in the [arch/xfce wiki](https://wiki.archlinux.org/index.php/Polkit#Authentication_agents)
+  - tried reading the [man pages for polkit](https://github.com/resin-io/etcher/issues/1529) to learn about [config/autostart](https://forum.xfce.org/viewtopic.php?id=11032)
+- I probably fell too deeply down that particular rabbit hole, because before I knew it, it was well after lunch time
+- I'm going to take the SD card home for the weekend and try to find time to use etcher to flash a clean image of raspbian and run it on scott's pi zero
+
+## wrap up
+
+All in all, a frustrating but **very** successful week. I got a lot accomplished thanks to the semester break schedule and several library staff members being out. It's hard to find uninterrupted time to deep dive on these problems, so it's nice to have a few hours carved out during break weeks-- even between lots of unnecessary meetings. 
