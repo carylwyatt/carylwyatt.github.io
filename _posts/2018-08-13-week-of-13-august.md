@@ -21,3 +21,8 @@ I've been working on this for the better part of today, and I'm still not sure w
 - doing a lot of reading about polkit/D-Bus/dameons/permissions/sudoers... but I'm trying to stick to the instructions in etcher's issues because that's really all I need to do!
 - the most frustrating part is that I can see I already have an authentication agent going on start up (Applications > Settings > Settings Manager > Session and startup > Application autostart): PolicyKit Authentication Agent
   - when you hover, it says `Command: /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1` *so... isn't there already one running on the system? does this mean I just need to figure out how to add a policy/action for etcher to the manager???* 
+
+Tomorrow:
+- finish changing permissions on /actions etcher policy
+- write new policy file
+- move etcher from `/home/carylwyatt/` to `/usr/bin/` for easy execution
