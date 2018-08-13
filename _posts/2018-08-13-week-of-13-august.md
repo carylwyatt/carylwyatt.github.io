@@ -12,3 +12,12 @@ Over the weekend, I took the SD card/flash drive with raspbian home to see if I 
 - At the end of reformatting, I forgot to remount the device to the computer, and now my chromebook is acting like it doesn't exist.
 - When I try to `mount` it via terminal, it tells me I don't have permissions. After googling, it looks like it's a polkit error, which means my whole Sunday rabbit hole only led to the end of Friday's rabbit hole.
 - I guess I need to figure out this polkit/authentication nonsense. *heavy sigh*
+
+I've been working on this for the better part of today, and I'm still not sure what it's all about. I have a few polkit(s) installed... I think? 
+- Looked under `/usr/lib` for anything called polkit. Installed `policykit-1-gnome` and `policykit-1` was already installed... I think?
+- looked at the policies themselves (I think??) under `/usr/share/polkit-1/actions`
+- attempted to write a policy for etcher but kept running into permissions issues
+- gonna have to remember how to do `chmod` read/write abilities... (so many things to remember/check on, it's very exhausting)
+- doing a lot of reading about polkit/D-Bus/dameons/permissions/sudoers... but I'm trying to stick to the instructions in etcher's issues because that's really all I need to do!
+- the most frustrating part is that I can see I already have an authentication agent going on start up (Applications > Settings > Settings Manager > Session and startup > Application autostart): PolicyKit Authentication Agent
+  - when you hover, it says `Command: /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1` *so... isn't there already one running on the system? does this mean I just need to figure out how to add a policy/action for etcher to the manager???* 
