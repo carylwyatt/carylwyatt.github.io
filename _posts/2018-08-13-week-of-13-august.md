@@ -26,3 +26,9 @@ Tomorrow:
 - finish changing permissions on /actions etcher policy
 - write new policy file
 - move etcher from `/home/carylwyatt/` to `/usr/bin/` for easy execution
+
+## 14 aug
+
+Books & Bagels event today! It went so well!! Then we had a librarian meeting, so it's 4pm now and I probably won't get much done. I'm going to at least change the permissions on the actions folder.
+
+**OMG** all I did was move etcher to /usr/bin and rename it etcher instead of etcher.AppImage, then removed the `org.xfce.skexec.etcher.policy` file from the `polkit-1/actions` directory and it FLASHED THE SD CARD. So excited right now, y'all.
