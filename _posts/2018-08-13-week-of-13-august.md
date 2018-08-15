@@ -55,4 +55,6 @@ It's been a little over a week of trying to figure out this whole flashing an SD
 
 Onto ssh-ing!
 
+### brand new pi 
 
+It's been about 9 months since I've set up a fresh install of raspbian, so I guess it's time to go back and read notes/watch screencasts of what I did before. :sweat_smile:
