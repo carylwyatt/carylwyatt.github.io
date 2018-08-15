@@ -49,3 +49,10 @@ Before I could flash the card, I had to reformat the SD card... again. This time
 
 `sudo gparted` launched the program. I picked out the device I needed to reformat, deleted all partitions except one, then reformatted it to FAT32. It wiped it all in one go, and I was ready to open etcher and move on. Let's hope this round of flashing actually works.
 
+### success!
+
+It's been a little over a week of trying to figure out this whole flashing an SD card situation. I knew it would take a while to figure out, but I did *not* expect it to take *this* long. I think etcher really helped, but I'd like to try again with the command line `dd` version (now that I know I had the wrong image on my USB stick) once I've gotten this whole imaging thing down.
+
+Onto ssh-ing!
+
+
