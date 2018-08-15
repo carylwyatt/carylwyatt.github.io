@@ -40,3 +40,12 @@ First thing this morning, I rolled out the TV and got the raspi hooked up to the
 I'm going to try reformatting and flashing an older kernel version. I'm pretty sure the version I have currently in production is 4.14.3- and this one is 4.14.50, so maybe that's the problem. Or maybe I bricked the SD card with some nonsense I've been trying lately. Who's to say? I do have the SD card Jonathan sent me, but I 'd rather not accidentally brick his card, too, so I'll keep on keeping on for now.
 
 After some googling, it seems the kernel panic error `unable to mount root fs on unknown block` might be due to the wrong type or amount of partitions    on the SD card. To verify this theory, I popped the original SD card into the card reader, and lo and behold, there are three partitions on it. The latest flashed card has 4. I'm going to run the flash again or try reformatting and reflashing... we'll see how it goes.
+
+**Another duh moment**: I'm pretty sure I was using a busted image... heh. I had downloaded the latest raspbian stretch onto a usb stick. I then assumed I'd extracted it to the chromebook, but I see now that this probably did not happen. I wasn't using the ol' noggin' very well, because the usb stick I had downloaded the zip file onto is only 4GB and the extracted image of raspbian is ~4GB all on its own. I just don't think it's possible that all 4GB made it onto the stick or the chromebook. 
+
+I re-downloaded the zip file to a larger USB stick, and I'm currently flashing the card. Instead of trying to unzip the image, I used the zip directly from etcher's file-picker. I didn't realize this was an option, but it indicated it would be flashing ~4GB of an image, which sounds right. 
+
+Before I could flash the card, I had to reformat the SD card... again. This time I used GParted (which I kept hearing about but didn't want to install becuase I'm a stubborn idiot). It was way way easier using GParted than any of the CLI partition stuff I've been doing. 
+
+`sudo gparted` launched the program. I picked out the device I needed to reformat, deleted all partitions except one, then reformatted it to FAT32. It wiped it all in one go, and I was ready to open etcher and move on. Let's hope this round of flashing actually works.
+
