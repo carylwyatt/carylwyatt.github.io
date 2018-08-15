@@ -57,4 +57,6 @@ Onto ssh-ing!
 
 ### brand new pi 
 
-It's been about 9 months since I've set up a fresh install of raspbian, so I guess it's time to go back and read notes/watch screencasts of what I did before. :sweat_smile:
+It's been about a year since I've set up a fresh install of raspbian, so I guess it's time to go back and read notes/watch screencasts of what I did before. :sweat_smile:
+
+*Oh, man. I was such a sweet summer child in these videos. I thought I knew what I was in for, but I had no idea.*
