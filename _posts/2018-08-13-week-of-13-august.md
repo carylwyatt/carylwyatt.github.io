@@ -38,3 +38,5 @@ Books & Bagels event today! It went so well!! Then we had a librarian meeting, s
 First thing this morning, I rolled out the TV and got the raspi hooked up to the screen so I could pop in the SD card and zip on along with this ssh/auto-upgrade stuff... but I got the same kernel panic error as I did last time!
 
 I'm going to try reformatting and flashing an older kernel version. I'm pretty sure the version I have currently in production is 4.14.3- and this one is 4.14.50, so maybe that's the problem. Or maybe I bricked the SD card with some nonsense I've been trying lately. Who's to say? I do have the SD card Jonathan sent me, but I 'd rather not accidentally brick his card, too, so I'll keep on keeping on for now.
+
+After some googling, it seems the kernel panic error `unable to mount root fs on unknown block` might be due to the wrong type or amount of partitions    on the SD card. To verify this theory, I popped the original SD card into the card reader, and lo and behold, there are three partitions on it. The latest flashed card has 4. I'm going to run the flash again or try reformatting and reflashing... we'll see how it goes.
