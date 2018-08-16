@@ -132,3 +132,9 @@ That's everything from the 5 basic security tips for raspi article (except the s
 
 ### push docker image to hub
 
+- created new repo on docker hub
+- [added my docker username to docker cloud in terminal](https://docs.docker.com/docker-cloud/builds/push-images/) and logged in
+- built the image using the name of the repo `docker build -t carylwyatt/raspberrypi-people-counter .`
+- pushed to docker hub: `docker push carylwyatt/raspberrypi-people-counter`
+
+I'm really quite pleased this worked as well as it did. Next up: pulling the image down on my new SD card, building, running, testing. Then making a new image!! 
