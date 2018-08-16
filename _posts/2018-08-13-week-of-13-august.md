@@ -94,5 +94,41 @@ Worked through 5 security tips (except ssh):
 - added user `sudo adduser ivylib`
 - typed new password
 - selected defaults for user info
+- `sudo usermod -aG sudo ivylib`
+- `sudo adduser ivylib sudo`
+- change configuration: uncheck 'autologin as 'pi'
+- reboot
 - logged in as ivylib
 - deleted user pi: `sudo userdel -r pi`
+- did docker permissions again: `sudo usermod -aG docker ivylib`
+- `sudo apt-get update`
+- `sudo apt-get install fail2ban` (bans brute-force attempts)
+- open empty jail.local file: `sudo vim /etc/fail2ban/jail.local`
+- add following lines:
+  ```
+  [ssh]
+  
+  enabled = true
+  port = ssh
+  filter = sshd
+  logpath = /var/log/auth.log
+  bantime = 900
+  banaction = iptables-allports
+  findtime = 900
+  maxretry = 3
+  ```
+
+- `sudo service fail2ban restart`
+- install unattended-upgrades: `sudo apt-get install unattended-upgrades`
+- configure it: `sudo vim /etc/apt/apt.conf.d/50unattended-upgrades`
+- uncomment the line in the section *Unattended-Upgrade::Origins-Pattern {}* that starts "origin=Debian"...
+  - `"origin=Raspbian,codename=${distro_codename},label=Raspbian";`
+- under that add this line:
+  - `"origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";
+- `:wq`
+- reboot
+
+That's everything from the 5 basic security tips for raspi article (except the ssh key stuff).
+
+### push docker image to hub
+
