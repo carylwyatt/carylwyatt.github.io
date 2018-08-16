@@ -68,3 +68,24 @@ After talking with Scott last night, I decided to do some reading/youtubing abou
 Instead of working on SSH, I think I'm going to change gears and work on setting up the image. I'll change the username/password for security purposes, then work on installing docker and setting up auto-upgrades. I'll need to push my docker image from yesterday up to docker hub so I'll be able to pull it down on my the new image. Once all of that is working, I'll hopefully be able to get an answer from IT about SSH. 
 
 I also need to work on creating an image from what's installed on this new SD card. I know there are lots of tools out there for this kind of thing, I just need to find one that works on this chromebook. 
+
+### setting up the new pi
+
+Walked through setup screens:
+- set up country, time zone, language
+- changed password
+- selected (temporary) wifi network
+- checked for updates 
+- reboot
+
+Installed vim (can't live without it!)
+
+Updated network settings
+- see [network](https://github.com/carylwyatt/gate-counter#raspi) section on repo for details
+
+Installed Docker
+- `curl -sSL https://get.docker.com | sh`
+- `docker --version` to double check it installed correctly
+- `docker ps` to verify user pi doesn't have permissions
+- `sudo usermod -aG docker pi` to add pi as docker user
+- reboot for user permission change to take effect
