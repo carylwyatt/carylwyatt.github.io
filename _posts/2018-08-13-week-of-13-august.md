@@ -60,3 +60,11 @@ Onto ssh-ing!
 It's been about a year since I've set up a fresh install of raspbian, so I guess it's time to go back and read notes/watch screencasts of what I did before. :sweat_smile:
 
 *Oh, man. I was such a sweet summer child in these videos. I thought I knew what I was in for, but I had no idea.*
+
+## 16 aug
+
+After talking with Scott last night, I decided to do some reading/youtubing about SSH. He was confused about why IT would request the pis have ssh keys. I think they're very concerned about security. My concern is whether *I* would be the one setting up/issuing keys or if *IT* wants to do the key stuff.
+
+Instead of working on SSH, I think I'm going to change gears and work on setting up the image. I'll change the username/password for security purposes, then work on installing docker and setting up auto-upgrades. I'll need to push my docker image from yesterday up to docker hub so I'll be able to pull it down on my the new image. Once all of that is working, I'll hopefully be able to get an answer from IT about SSH. 
+
+I also need to work on creating an image from what's installed on this new SD card. I know there are lots of tools out there for this kind of thing, I just need to find one that works on this chromebook. 
