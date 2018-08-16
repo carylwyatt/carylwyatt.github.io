@@ -124,7 +124,7 @@ Worked through 5 security tips (except ssh):
 - uncomment the line in the section *Unattended-Upgrade::Origins-Pattern {}* that starts "origin=Debian"...
   - `"origin=Raspbian,codename=${distro_codename},label=Raspbian";`
 - under that add this line:
-  - `"origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";
+  - `"origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";`
 - `:wq`
 - reboot
 
