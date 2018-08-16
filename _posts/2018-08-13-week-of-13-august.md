@@ -89,3 +89,10 @@ Installed Docker
 - `docker ps` to verify user pi doesn't have permissions
 - `sudo usermod -aG docker pi` to add pi as docker user
 - reboot for user permission change to take effect
+
+Worked through 5 security tips (except ssh):
+- added user `sudo adduser ivylib`
+- typed new password
+- selected defaults for user info
+- logged in as ivylib
+- deleted user pi: `sudo userdel -r pi`
