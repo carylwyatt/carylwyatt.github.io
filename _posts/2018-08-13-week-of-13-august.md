@@ -175,6 +175,7 @@ It's 2pm, and I'm very tempted to call it a week. I could work on:
 - weird board closing before calibration problem
 - creating an image based on the current "new" SD card
 - libinsight API
+- updating gate-counter app to get rid of url of request/data sent message in console
 
 ... but will I do any of those?
 
