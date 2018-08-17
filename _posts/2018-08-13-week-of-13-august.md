@@ -148,7 +148,11 @@ Started off the morning by pulling down the docker image from docker hub
 - `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules carylwyatt/raspberrypi-people-counter`
 - SADNESS OF SADNESSES: same stupid modprobe error I've gotten before :sob:
 - went back and looked through notes to find how I fixed this (8 august)
-- tried installing `linux-headers-\`uname -r\`` but got the same error as I did that day: unable to locate package for this kernel
+- tried
+  ```
+  sudo apt-get install linux-headers-`uname -r`
+  ```
+ but got the same error as I did that day: unable to locate package for this kernel
 - my only other idea is to enable i2c and serial port in raspi config
 - THAT DID IT. Add to list of things to setup on the image.
 - AND it's posting to the google spreadsheet, so win-win-win
@@ -167,8 +171,8 @@ Fixed the timezone issue with this:
 - selected 5 (Eastern)
 - tada!
 
-It's 2pm, and I'm very tempted to call it a week. I could:
-- work on the weird board closing before calibration problem
+It's 2pm, and I'm very tempted to call it a week. I could work on:
+- weird board closing before calibration problem
 - creating an image based on the current "new" SD card
 - libinsight API
 
