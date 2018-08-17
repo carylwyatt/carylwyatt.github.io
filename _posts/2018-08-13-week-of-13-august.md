@@ -167,3 +167,10 @@ Fixed the timezone issue with this:
 - selected 5 (Eastern)
 - tada!
 
+It's 2pm, and I'm very tempted to call it a week. I could:
+- work on the weird board closing before calibration problem
+- creating an image based on the current "new" SD card
+- libinsight API
+
+... but will I do any of those?
+
