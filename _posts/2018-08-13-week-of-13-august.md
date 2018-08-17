@@ -138,3 +138,17 @@ That's everything from the 5 basic security tips for raspi article (except the s
 - pushed to docker hub: `docker push carylwyatt/raspberrypi-people-counter`
 
 I'm really quite pleased this worked as well as it did. Next up: pulling the image down on my new SD card, building, running, testing. Then making a new image!! 
+
+## 17 aug
+
+### running docker image on new SD card
+
+Started off the morning by pulling down the docker image from docker hub
+- `docker pull carylwyatt/raspberrypi-people-counter`
+- `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules carylwyatt/raspberrypi-people-counter`
+- SADNESS OF SADNESSES: same stupid modprobe error I've gotten before :sob:
+- went back and looked through notes to find how I fixed this (8 august)
+- tried installing `linux-headers-\`uname -r\`` but got the same error as I did that day: unable to locate package for this kernel
+- my only other idea is to enable i2c and serial port in raspi config
+- THAT DID IT. Add to list of things to setup on the image.
+
