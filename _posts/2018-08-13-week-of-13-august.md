@@ -179,3 +179,16 @@ It's 2pm, and I'm very tempted to call it a week. I could work on:
 
 ... but will I do any of those?
 
+### creating disk image
+
+Did all the googling. It seems the easiest way to create a custom disk image of raspbian is to use raspberry pi's [pi gen tool](https://github.com/RPi-Distro/pi-gen). That's what I'll do, I guess. (all next steps completed on chromebook's xfce/ubuntu xenial)
+- the usual `sudo apt-get update && apt-get upgrade -y`
+- installed dependencies listed in README: `apt-get install quilt parted realpath qemu-user-static debootstrap zerofree pxz zip dosfstools bsdtar libcap2-bin grep rsync xz-utils file git`
+- most of these were already installed
+
+After reading through the README, I'm not sure I have the chops to pull this off. I think I need to write a config file? But I don't really understand how the things I want installed on the image will end up on the image... so I googled "create disk image from SD card" and learned I can [use `dd` to make a disk image](https://raspberrypi.stackexchange.com/questions/69914/how-to-clone-raspberry-pi-sd-card-on-windows-linux-and-macos) from my current SD card build, which totally makes sense now that I'm thinking about it.
+
+Followed the instructions on [beebom](https://beebom.com/how-clone-raspberry-pi-sd-card-windows-linux-macos/) to clone the sd card and save the image on a usb stick:
+- `cd /media/removable/LAWIVYLIB`
+- `sudo dd if=/dev/sdc of=raspbian_backup.img`
+- used `sudo fdisk -l` to find which `/dev/` directory was the SD card, this time it happens to be sdc
