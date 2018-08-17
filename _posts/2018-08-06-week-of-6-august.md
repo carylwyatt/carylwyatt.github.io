@@ -101,7 +101,7 @@ Got into new-test container using `exec` so I could dig around in the files
   sudo apt-get install linux-headers-`uname -r`
   ```
 
-...and got a new error:
+- ...and got a new error:
 	```
 	E: Unable to locate package linux-headers-4.14.34-v7
 	E: Couldn't find any package by regex 'linux-headers-4.14.34-v7'
