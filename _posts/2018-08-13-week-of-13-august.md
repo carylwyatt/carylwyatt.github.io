@@ -151,4 +151,19 @@ Started off the morning by pulling down the docker image from docker hub
 - tried installing `linux-headers-\`uname -r\`` but got the same error as I did that day: unable to locate package for this kernel
 - my only other idea is to enable i2c and serial port in raspi config
 - THAT DID IT. Add to list of things to setup on the image.
+- AND it's posting to the google spreadsheet, so win-win-win
+
+Decided to add the `--name` flag so I don't have to look up the container ID every single time
+- `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules --name counter carylwyatt/raspberrypi-people-counter`
+- `docker exec -it counter /bin/bash`
+
+Issues with the image/container/app:
+- board closes after initial run command, need to use exec to get it started up again
+- time is oddly 4 hours ahead??
+
+Fixed the timezone issue with this:
+- `sudo dpkg-reconfigure tzdata`
+- selected 12 (US)
+- selected 5 (Eastern)
+- tada!
 
