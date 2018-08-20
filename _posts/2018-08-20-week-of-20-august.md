@@ -9,3 +9,5 @@ date: 2018-08-20
 Kicking off this school year by wiping the "new" SD card! :boom: :star2:
 
 After finishing last week by saving a clone/image of the new SD card, I used GParted to delete all partitions and reformat the remaining bit to 32FAT. Now etcher is doing its thing and re-imaging from the saved image on the flash drive. If this works, I'd like to try it again using `dd` instead of etcher. I'm not sure why `dd` didn't work the first time I flash the SD card, but my bet is that my image wasn't a complete image. We'll find out!
+
+It worked! Amazing! I need to tweak the image, though. There were already containers built/running, which we probably don't want to do. I will erase all images/containers, and save the image again. Then try to `dd` instead of using etcher to flash.
