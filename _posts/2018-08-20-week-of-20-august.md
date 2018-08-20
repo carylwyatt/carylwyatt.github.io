@@ -4,7 +4,7 @@ title: "week of 20 august"
 date: 2018-08-20
 ---
 
-## 20 aug
+### 20 aug
 
 Kicking off this school year by wiping the "new" SD card! :boom: :star2:
 
@@ -13,3 +13,9 @@ After finishing last week by saving a clone/image of the new SD card, I used GPa
 It worked! Amazing! I need to tweak the image, though. There were already containers built/running, which we probably don't want to do. I will erase all images/containers, and save the image again. Then try to `dd` instead of using etcher to flash.
 
 Tweaked the base image, saved it to the usb stick, wiped the SD card, then used dd to transfer image. It took FOREVER (like... 30 minutes?) but it worked! Etcher is much faster, but at least I can give people options. 
+
+#### LibInsight API
+
+I've never worked with POST data before! Exciting day for me. 
+
+Had to do some reading, obviously. I knew that I wanted to use the [request library](https://www.npmjs.com/package/request). Then I found a [stack overflow answer about sending POST data in node.js](https://stackoverflow.com/questions/6158933/how-to-make-an-http-post-request-in-node-js) which really helped. I kept getting hung up on the HTML form because I'm not using a UI... so how could I use a form? Duh, you don't need one with node.js (backend, not front end). 
