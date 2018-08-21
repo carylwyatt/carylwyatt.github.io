@@ -19,3 +19,7 @@ Tweaked the base image, saved it to the usb stick, wiped the SD card, then used 
 I've never worked with POST data before! Exciting day for me. 
 
 Had to do some reading, obviously. I knew that I wanted to use the [request library](https://www.npmjs.com/package/request). Then I found a [stack overflow answer about sending POST data in node.js](https://stackoverflow.com/questions/6158933/how-to-make-an-http-post-request-in-node-js) which really helped. I kept getting hung up on the HTML form because I'm not using a UI... so how could I use a form? Duh, you don't need one with node.js (backend, not front end). 
+
+### 21 aug
+
+The LibInsight API call is working! Made some changes to the gate-counter.js app that I'll be pushing to github tomorrow. Today was pretty busy with regular library stuff, so I didn't have a bunch of time to work on this. More tomorrow! 
