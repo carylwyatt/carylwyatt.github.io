@@ -23,3 +23,7 @@ Had to do some reading, obviously. I knew that I wanted to use the [request libr
 ### 21 aug
 
 The LibInsight API call is working! Made some changes to the gate-counter.js app that I'll be pushing to github tomorrow. Today was pretty busy with regular library stuff, so I didn't have a bunch of time to work on this. More tomorrow! 
+
+### 22 aug
+
+Made some tweaks the libinsight file. Everything seems to be working well! I'm going to have to add some math to cut the count in 2 (one for incoming, one for outgoing). Now that the libinsight issue has been worked out, what was left on the to-do list? Weird board closing problem, and bash script on startup. On to weird board closing problem!
