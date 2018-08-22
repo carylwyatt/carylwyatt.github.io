@@ -42,3 +42,6 @@ I learned:
   - [docker docs on setting entrypoint](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime)
 
 I tried `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules --entrypoint /bin/bash new-test` with CMD set to "node" in the Dockerfile, and it was pretty much exactly like running `docker exec`. Pick up here when you begin again tomorrow! 
+
+Also this about running a bash script in Dockerfile/entrypoint/exec: 
+  - [Bet practice to run a bash setup script after creation of container](https://forums.docker.com/t/best-practice-to-run-a-bash-setup-script-after-creation-of-container/28988)
