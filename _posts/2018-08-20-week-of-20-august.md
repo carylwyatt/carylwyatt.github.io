@@ -44,4 +44,19 @@ I learned:
 I tried `docker run -it --cap-add=ALL --privileged -v /lib/modules:/lib/modules --entrypoint /bin/bash new-test` with CMD set to "node" in the Dockerfile, and it was pretty much exactly like running `docker exec`. Pick up here when you begin again tomorrow! 
 
 Also this about running a bash script in Dockerfile/entrypoint/exec: 
-  - [Bet practice to run a bash setup script after creation of container](https://forums.docker.com/t/best-practice-to-run-a-bash-setup-script-after-creation-of-container/28988)
+  - [Best practice to run a bash setup script after creation of container](https://forums.docker.com/t/best-practice-to-run-a-bash-setup-script-after-creation-of-container/28988)
+
+### 23 aug
+
+A lot happened today, but I made zero progress.
+
+I mostly edited my Dockerfile and built/ran containers for several hours. Here are pertinent links:
+- [Dockerfile: ENTRYPOINT vs CMD](https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/)
+- [Docker docs: Define a container | dockerfile](https://docs.resin.io/learn/develop/dockerfile/)
+- [Stack overflow: ENTRYPOINT in combination with CMD](https://stackoverflow.com/questions/44631605/entrypoint-in-combination-with-cmd?rq=1)
+- [How can I resolve the error "cannot execute binary file"?](https://superuser.com/questions/435988/how-can-i-resolve-the-error-cannot-execute-binary-file) 
+- [Shell complains 'cannot execute binary file'](https://stackoverflow.com/questions/2534065/shell-complains-cannot-execute-binary-file)
+- [ENTRYPOINT chmod](https://forums.docker.com/t/entrypoint-chmod/36893/2)
+- [Docker shell commands/Dockerfile cheat sheet](https://gist.github.com/bahmutov/1003fa86980dda147ff6)
+
+I can't figure out how to get the container to execute the node command and leave the board open. But it pretty much has to happen if I want this to be a plug-and-play endeavour. I'm not sure that's possible anyway, since the LibInsight API has different tokens for each door, which means someone has to edit the gate-counter.js file anyway. UNLESS I could find a way to change the URL variable from outside... during the imaging? 
