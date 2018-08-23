@@ -52,7 +52,7 @@ A lot happened today, but I made zero progress.
 
 I mostly edited my Dockerfile and built/ran containers for several hours. Here are pertinent links:
 - [Dockerfile: ENTRYPOINT vs CMD](https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/)
-- [Docker docs: Define a container | dockerfile](https://docs.resin.io/learn/develop/dockerfile/)
+- [Docker docs: Define a container - dockerfile](https://docs.resin.io/learn/develop/dockerfile/)
 - [Stack overflow: ENTRYPOINT in combination with CMD](https://stackoverflow.com/questions/44631605/entrypoint-in-combination-with-cmd?rq=1)
 - [How can I resolve the error "cannot execute binary file"?](https://superuser.com/questions/435988/how-can-i-resolve-the-error-cannot-execute-binary-file) 
 - [Shell complains 'cannot execute binary file'](https://stackoverflow.com/questions/2534065/shell-complains-cannot-execute-binary-file)
