@@ -5,3 +5,5 @@ _site/
 *.swp
 *.swo
 *.swn
+
+.DS_Store
