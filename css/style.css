@@ -2,6 +2,7 @@
 
 html {
     font-size:20px;
+    color: #333;
 }
 
 body {
@@ -63,7 +64,6 @@ h3 {
 }
 p {
     line-height: 1.4em;
-    color: #333;
 }
 footer {
     border-top: 1px solid #d5d5d5;
