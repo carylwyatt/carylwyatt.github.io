@@ -101,6 +101,13 @@ ul.posts li {
     list-style: none;
 }
 
+.portfolio-image {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:500px;
+}
+
 code {
     background-color: rgba(27,31,35,.05);
     border-radius: 3px;
