@@ -101,11 +101,6 @@ ul.posts li {
     list-style: none;
 }
 
-.portfolio-image {
-    display:flex;
-    flex-direction:column;
-}
-
 .portfolio-image img {
     margin:auto;
     padding:40px;
