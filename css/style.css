@@ -105,7 +105,11 @@ ul.posts li {
     display:flex;
     flex-direction:column;
     justify-content:center;
-    width:500px;
+}
+
+.portfolio-image img {
+    margin:auto;
+    padding:40px;
 }
 
 code {
