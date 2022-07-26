@@ -101,6 +101,9 @@ ul.posts li {
     list-style: none;
 }
 
+.portfolio-image {
+    text-align:center;
+}
 .portfolio-image img {
     margin:auto;
     padding:40px;
